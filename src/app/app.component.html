@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="title-container">
+    <div class="title">Teste de personalidade</div>
+  </div>
+
+  <ng-container *ngIf="!animalCurrent">
+    <div *ngIf="questionCurrent">
+        <div class="title-question"><b>{{questionCurrent.number}} - {{questionCurrent.description}}</b></div>
+        <div class="alternative-description" *ngFor="let alternative of questionCurrent.alternatives">
+          <input type="checkbox" name="check-alternative" [value]="alternative.description" (change)="onlyOne(alternative, questionCurrent, $event)">
+          <span>{{alternative.description}}</span>
+        </div>
+    </div>
+
+    <button class="button-previous" [class.disabled]="buttonPreviousDisabled" (click)="previousQuestion()">Anterior</button>
+    <button class="button-next" [class.disabled]="buttonNextDisabled" (click)="nextQuestion()">Próxima</button>
+    <button *ngIf="buttonSend" class="button-save" (click)="finish()">Enviar</button>
+
+    <br>
+    <progress class="progress" [value]="progressValue" [max]="progressTotal">sa</progress>
+  </ng-container>
+
+
+  <ng-container *ngIf="animalCurrent">
+    <div class="title-container">
+      <div class="title-animal">{{animalCurrent.name}}</div>
+    </div>
+
+    <div class="image-animal">
+      <img class="image-animal" src="{{animalCurrent.url}}">
+    </div>
+
+    <div class="description-animal">{{animalCurrent.description}}</div>
+
+    <div class="container-reset">
+      <button class="button-reset" (click)="reset()">Voltar</button>
+    </div>
+  </ng-container>
+</div>

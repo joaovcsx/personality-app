@@ -1,0 +1,90 @@
+.button-next, .button-previous, .button-save, .button-reset {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.title-container {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.alternative-description {
+  margin-bottom: 10px;
+}
+
+.title-question {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.progress {
+  width: 300px;
+}
+
+.image-animal {
+  width: 360px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.description-animal {
+  margin-bottom: 20px;
+}
+
+.container-reset {
+  display: flex;
+}
+
+.button-reset {
+    margin-left: auto;
+}
+
+.title-animal {
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: cursive;
+  color: currentcolor;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.title {
+  margin-top: 30px;
+  font-size: 30px;
+  font-family: cursive;
+  color: currentcolor;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-previous {
+  background-color: red;
+}
+
+.button-save, .button-reset {
+  background-color: blue;
+}
+
+
+.disabled {
+  opacity: 0.5;
+}
